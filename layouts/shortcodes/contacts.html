@@ -1,0 +1,39 @@
+<div id="contact-list">
+</div>
+<style>
+    #contact-list {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+</style>
+<script  type="application/javascript" src="http://localhost:1313/user-card.js"></script>
+<script>
+    const contactsURL = 'http://www.mocky.io/v2/5e9d8518340000362f6ee735';
+    const contactsPromise = new Promise((resolve, reject) => {
+        fetch(contactsURL).then((resp) => resolve(resp.json()))
+    });
+    contactsPromise.then((contacts) => {
+        const cardArray = contacts.forEach((contact, i) => {
+            const cardElement = document.createElement('user-card');
+            cardElement.name = contact.name;
+            cardElement.id = i;
+            cardElement.avatar = contact.avatar;
+            cardElement.innerHTML = `
+                <div slot="email">${contact.contactInfo.email}</div>
+                <div slot="phone">${contact.contactInfo.phone}</div>
+            `;
+            cardElement.nameClicked = onClickedName;
+            cardElement.deleteClicked = onPressDelete;
+            document.getElementById('contact-list').appendChild(cardElement);
+        });
+    });
+
+    function onClickedName(name) {
+        alert(`I'm ${name}!`)
+    }
+
+    function onPressDelete(i) {
+        const elementToBeRemoved = document.querySelector(`user-card[id="${i}"]`);
+        document.getElementById('contact-list').removeChild(elementToBeRemoved);
+    }
+</script>

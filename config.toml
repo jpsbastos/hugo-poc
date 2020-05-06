@@ -1,16 +1,19 @@
+title = "My New Hugo Site"
 theme = "ghostwriter"
+baseURL = ""
 
 [Params]
     mainSections = ["post"]
     intro = true
     headline = "My headline"
     description = "My description"
-    github = "https://github.com/XXX"
-    twitter = "https://twitter.com/XXX"
-    email = "XXX@example.com"
+    github = "https://github.com/jpsbastos"
+    twitter = "https://twitter.com/xiklax"
+    email = "jps.bastos.1110@gmail.com"
     opengraph = true
     shareTwitter = true
     dateFormat = "Mon, Jan 2, 2006"
 
 [Permalinks]
-    post = "/:filename/"
+    post = "/post/:filename/"
+    page = ":filename/"

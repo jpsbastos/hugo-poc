@@ -1,0 +1,39 @@
+<style>
+    .hugo-card {
+        border-radius: 5px;
+        border: 1px dashed black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family:'Courier New', Courier, monospace;
+    }
+
+    .hugo-img-container {
+        width: 30%;
+    }
+
+    .hugo-img-container img {
+        border-radius: 50%;
+    }
+
+    .hugo-card h2 {
+        text-align: center;
+    }
+</style>
+<div class="hugo-card">
+    <div class="hugo-img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Skrillex_%28Sonny_Moore%29_%28cropped%29.jpg" alt="Skrillex">
+    </div>
+    <div class="hugo-info-container">
+        <h2>Skrillex</h2>
+        <hr>
+        <p><strong>Email: </strong>press@skrillex.com</p>
+        <p><strong>Phone: </strong>+1 233-233-112</p>
+    </div>
+    <user-card-ramon name="{{ .Get 0 }}" avatar="{{ .Get 1 }}">
+        <div slot="email">{{ .Get 2 }}</div>
+        <div slot="phone">{{ .Get 3 }}</div>
+    </user-card-ramon>
+</div>
+<script src="http://localhost:1313/userCardRamon.js"></script>
