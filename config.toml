@@ -1,5 +1,6 @@
-title = "My New Hugo Site"
+title = "CTW's Team Pegasus Hugo POC"
 theme = "ghostwriter"
+baseURL = "/"
 
 [Params]
     mainSections = ["post"]
