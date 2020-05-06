@@ -1,6 +1,5 @@
 title = "My New Hugo Site"
 theme = "ghostwriter"
-baseURL = ""
 
 [Params]
     mainSections = ["post"]
