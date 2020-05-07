@@ -1,7 +1,6 @@
 ---
 title: "Skrillex Music Style"
 date: 2020-04-28T14:56:23+01:00
-draft: true
 author: "João Bastos"
 ---
 
